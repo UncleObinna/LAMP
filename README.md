@@ -13,11 +13,14 @@
 
 ### 3. Check if firewall is installed, enabled and if it allows web traffic
 - To check if firewall (ufw) is installed: `ufw --version`.
+- <img width="442" alt="UFW_version" src="https://user-images.githubusercontent.com/69907708/205644821-ac445e17-0ff2-48e8-a111-e4aaa9e2bfcb.png">
 - If it isn't, run `sudo apt install ufw`.
 - To check if it is enabled: `sudo systemctl status ufw`.
 - If it isn't running, run `sudo systemctl start ufw`.
 - To check if it has a profile for Apache, run `sudo ufw app list`.
+- <img width="405" alt="UFW_list" src="https://user-images.githubusercontent.com/69907708/205644943-b1921920-d493-4e92-bc45-b4c809c51552.png">
 - Run `sudo ufw app info "Apache Full"` to see if it enables traffic to ports **80** and **443**.
+- <img width="705" alt="UFW_apache" src="https://user-images.githubusercontent.com/69907708/205645060-edea3543-88a1-4eec-aed0-235349e1f791.png">
 - If it doesn't allow traffic to the ports, run `sudo ufw allow "Apache Full"`.
 
 ### 4. Install a Database (MariaDB)
@@ -43,3 +46,5 @@ phpinfo ();
 
 ### 8. Open Test Page
 - Open the test page in your browser by visiting: `localhost/info.php`.
+- <img width="1368" alt="testpage" src="https://user-images.githubusercontent.com/69907708/205645586-ec7fd0bc-b927-4bed-acc2-1f0ebb556cc3.png">
+
